@@ -186,7 +186,7 @@ module.exports = function setupSiteApp(options = {}) {
             app.setupErrorHandling(siteApp);
         }
     });
-    siteApp.use(errorHandler.handleThemeResponse(sentry));
+    siteApp.use(mw.errorHandler.handleThemeResponse);
 
     debug('Site setup end');
 
